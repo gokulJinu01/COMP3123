@@ -1,23 +1,28 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Details from "./studentDetails";
+import Head from "./studentDetails";
 
 function App() {
+  const studentId = "101373306";
+  const name = "Gokul Jinu";
+  const college = "George Brown College, Toronto";
+  const mHead = "Welcome to Fullstack Developmet - I";
+  const sHead = "React JS Programming Week09 Lab Exercise";
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Welcome to Fullstack Developmet - I</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <Details
+          mainHead={mHead}
+          subHead={sHead}
+          studentId={studentId}
+          studentName={name}
+          studentClg={college}
+        />
       </header>
     </div>
   );
